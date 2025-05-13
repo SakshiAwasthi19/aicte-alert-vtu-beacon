@@ -16,10 +16,10 @@ const CallToAction = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button className="bg-vtu-blue hover:bg-vtu-lightBlue text-white px-8 py-6 text-lg">
-              Create Free Account
+              Find Nearby Events
             </Button>
             <Button variant="outline" className="border-vtu-blue text-vtu-blue hover:bg-vtu-blue/10 px-8 py-6 text-lg">
-              Request Demo
+              View Dashboard
             </Button>
           </div>
         </div>
