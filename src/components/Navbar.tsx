@@ -2,6 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { 
+  LogOut,
+  UserRound, 
+  LayoutDashboard 
+} from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -22,15 +27,31 @@ const Navbar = () => {
               <Link to="/" className="text-gray-700 hover:text-vtu-blue px-3 py-2 font-medium">
                 FAQ
               </Link>
-              <Button variant="outline" className="border-vtu-blue text-vtu-blue hover:bg-vtu-blue hover:text-white">
-                Sign In
-              </Button>
-              <Button className="bg-vtu-green hover:bg-vtu-green/90 text-white">
-                Register
-              </Button>
+              <div className="flex items-center ml-4 space-x-3">
+                <Button variant="ghost" size="icon" className="text-gray-700 hover:text-vtu-blue">
+                  <LayoutDashboard className="h-5 w-5" />
+                  <span className="sr-only">Dashboard</span>
+                </Button>
+                <Button variant="ghost" size="icon" className="text-gray-700 hover:text-vtu-blue">
+                  <UserRound className="h-5 w-5" />
+                  <span className="sr-only">Profile</span>
+                </Button>
+                <Button variant="outline" className="border-vtu-blue text-vtu-blue hover:bg-vtu-blue hover:text-white">
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Logout
+                </Button>
+              </div>
             </div>
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-2">
+            <Button variant="ghost" size="icon" className="text-gray-700 hover:text-vtu-blue">
+              <LayoutDashboard className="h-5 w-5" />
+              <span className="sr-only">Dashboard</span>
+            </Button>
+            <Button variant="ghost" size="icon" className="text-gray-700 hover:text-vtu-blue">
+              <UserRound className="h-5 w-5" />
+              <span className="sr-only">Profile</span>
+            </Button>
             <Button variant="ghost" size="sm">
               Menu
             </Button>
